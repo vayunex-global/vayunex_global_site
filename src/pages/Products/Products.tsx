@@ -4,43 +4,43 @@ import { ArrowRight, Leaf, Shield, Zap, Award } from 'lucide-react';
 import './Products.css';
 
 // Import local product images
-import chakHaoImg from '../../assets/products/chak_hao.png';
-import johaImg from '../../assets/products/joha.png';
-import rajgiraImg from '../../assets/products/rajgira.png';
-import shilajitImg from '../../assets/products/shilajit_v2.png';
+import shilajitImg from '../../assets/products/Shilajit.jpg';
+import chakHaoRiceImg from '../../assets/products/Chak-hao_rice.jpg';
+import johaRiceImg from '../../assets/products/Joha_rice.jpg';
+import rajgiraImg from '../../assets/products/Rajgira(Amaranth).jpg';
 
 const Products: React.FC = () => {
   const products = [
     {
-      id: 'chak-hao',
-      name: 'Chak-Hao Rice (Black Rice)',
-      description: 'Sourced from the North-Eastern region of India, Chak-Hao is a traditional black rice known for its natural color, mild aroma, and nutritional richness. It contains high levels of antioxidants and is widely used in premium and health-conscious food segments. A nutrient-dense superfood ideal for gourmet culinary applications and health-conscious lifestyles, specialty dishes, and modern healthy diets.',
-      image: chakHaoImg,
-      features: ['High Antioxidants', 'Rich in Fiber', 'Naturally Sourced', 'Superfood'],
-      icon: <Zap size={20} />
-    },
-    {
       id: 'joha-rice',
       name: 'Joha Rice',
-      description: 'Joha rice is an aromatic, short-grain variety grown in Assam. It is valued for its pleasant fragrance, soft texture, and easy digestibility. Commonly used in traditional meals, it is also gaining popularity in international markets for its unique aroma and consistent cooking quality.',
-      image: johaImg,
-      features: ['Aromatic', 'Easy Digestibility', 'Premium Quality', 'Soft Texture'],
+      description: 'An exquisite, aromatic winter rice indigenous to the Northeast of India, prized for its delicate, sweet scent and superior taste. Grown traditionally by local farmers, Joha Rice is known for its high nutritional value, easy digestibility, and unique flavor profile. It is the perfect choice for creating rich traditional dishes, festive meals, and elevating everyday culinary experiences.',
+      image: johaRiceImg,
+      features: ['Aromatic Scent', 'Traditional Farming', 'Easily Digestible', 'Premium Quality'],
+      icon: <Leaf size={20} />
+    },
+    {
+      id: 'chak-hao',
+      name: 'Chak-Hao (Black Rice)',
+      description: 'A deeply aromatic and highly nutritious black rice, celebrated for its rich, slightly nutty flavor and remarkable health benefits. Uniquely high in anthocyanin antioxidants, dietary fiber, and essential minerals, this ancient grain supports heart health and overall wellness. Sourced from the finest, sustainable farms, it is ideal for gourmet recipes, healthy modern diets, and striking culinary presentations.',
+      image: chakHaoRiceImg,
+      features: ['High Antioxidants', 'Rich in Fiber', 'Nutrient-Dense', 'Gourmet Ingredient'],
       icon: <Leaf size={20} />
     },
     {
       id: 'rajgira',
       name: 'Rajgira (Amaranth)',
-      description: 'Rajgira is a naturally gluten-free grain widely consumed across India. It is rich in protein, fiber, and essential minerals, making it suitable for health foods and dietary products. It can be processed into flour, puffed grains, or snacks, meeting the growing global demand for nutritious alternatives.',
+      description: 'An ancient pseudocereal and powerful superfood, packed with high-quality protein, essential amino acids, calcium, and iron. Naturally gluten-free and highly versatile, Rajgira is a staple for fasting and healthy lifestyles alike. It provides sustained energy and is perfect for baking, porridge, or as a wholesome addition to a balanced, health-conscious diet.',
       image: rajgiraImg,
-      features: ['Gluten-Free', 'High Protein', 'Rich in Minerals', 'Versatile Grains'],
-      icon: <Award size={20} />
+      features: ['High Protein', 'Gluten-Free', 'Rich in Calcium & Iron', 'Superfood'],
+      icon: <Zap size={20} />
     },
     {
       id: 'shilajit',
-      name: 'Shilajit',
-      description: 'Shilajit is a naturally occurring potent mineral-rich resin, found in the Himalayan ranges. It is processed and purified before use, ensuring quality and safety standards. Known for its traditional use in wellness applications, it is widely demanded in nutraceutical and herbal product industries.',
+      name: 'Pure Shilajit Extract',
+      description: 'Premium-grade, purified Shilajit resin ethically sourced from the pristine high altitudes of the Himalayas. Packed with over 80 essential trace minerals and high levels of fulvic acid, it serves as a potent natural adaptogen. It enhances natural energy, stamina, cognitive function, and vitality. Responsibly processed to preserve its maximum potency and holistic wellness benefits.',
       image: shilajitImg,
-      features: ['Potent Resin', 'Mineral-Rich', 'Himalayan Source', 'Purified Quality'],
+      features: ['Potent Adaptogen', 'Rich in Fulvic Acid', 'Natural Vitality', 'Ethically Sourced'],
       icon: <Shield size={20} />
     }
   ];
@@ -77,7 +77,7 @@ const Products: React.FC = () => {
             <div className="container">
               <div className="product-grid animate-fade-in" style={{ animationDelay: `${0.2 * (index + 1)}s` }}>
                 <div className="product-image-container">
-                  <img src={product.image} alt={product.name} />
+                  <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
                 </div>
                 <div className="product-content">
                   <div className="feature-tag">

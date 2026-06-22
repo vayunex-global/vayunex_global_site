@@ -3,9 +3,8 @@ import { ShieldCheck, Truck, Globe2, ArrowRight } from 'lucide-react';
 import './Home.css';
 
 // Import local product images for the selection section
-import chakHaoImg from '../../assets/products/chak_hao.png';
-import johaImg from '../../assets/products/joha.png';
-import shilajitImg from '../../assets/products/shilajit_v2.png';
+import chakHaoRiceImg from '../../assets/products/Chak-hao_rice.jpg';
+import johaRiceImg from '../../assets/products/Joha_rice.jpg';
 
 const Home = () => {
   return (
@@ -113,35 +112,26 @@ const Home = () => {
           </p>
 
           <div className="products-grid">
-            {/* Product 1 - Black Rice */}
+            {/* Product 1 - Joha Rice */}
             <div className="product-card">
-              <div className="product-image" style={{ backgroundImage: `url(${chakHaoImg})` }}></div>
+              <div className="product-image" style={{ backgroundImage: `url(${johaRiceImg})` }}></div>
               <div className="product-info">
-                <h3>Premium Black Rice</h3>
-                <p>Nutrient-rich, authentically sourced organic black rice (Chak-Hao) for conscious consumers.</p>
+                <h3>Joha Rice</h3>
+                <p>An exquisite, aromatic winter rice indigenous to the Northeast of India, prized for its delicate scent and easy digestibility.</p>
                 <Link to="/contact" className="btn btn-primary w-full">Enquire Now</Link>
               </div>
             </div>
 
-            {/* Product 2 - Joha Rice */}
+            {/* Product 2 - Chak-Hao (Black Rice) */}
             <div className="product-card">
-              <div className="product-image" style={{ backgroundImage: `url(${johaImg})` }}></div>
+              <div className="product-image" style={{ backgroundImage: `url(${chakHaoRiceImg})` }}></div>
               <div className="product-info">
-                <h3>Aromatic Joha Rice</h3>
-                <p>Valued for its pleasant fragrance and soft texture, sourced from the heart of Assam.</p>
+                <h3>Chak-Hao (Black Rice)</h3>
+                <p>A deeply aromatic black rice celebrated for its nutty flavor, uniquely high anthocyanin antioxidants, and rich dietary fiber.</p>
                 <Link to="/contact" className="btn btn-primary w-full">Enquire Now</Link>
               </div>
             </div>
 
-            {/* Product 3 - Shilajit */}
-            <div className="product-card">
-              <div className="product-image" style={{ backgroundImage: `url(${shilajitImg})` }}></div>
-              <div className="product-info">
-                <h3>Pure Shilajit</h3>
-                <p>Potent, mineral-rich resin naturally occurring in the Himalayan ranges.</p>
-                <Link to="/contact" className="btn btn-primary w-full">Enquire Now</Link>
-              </div>
-            </div>
           </div>
 
           <div className="view-all-container">
