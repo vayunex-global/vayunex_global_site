@@ -76,15 +76,29 @@ const Products: React.FC = () => {
           <section key={product.id} className="product-section">
             <div className="container">
               <div className="product-grid animate-fade-in" style={{ animationDelay: `${0.2 * (index + 1)}s` }}>
-                <div className="product-image-container">
-                  <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
-                </div>
-                <div className="product-content">
+                {/* Mobile Header - Shows above image on small screens */}
+                <div className="product-mobile-header">
                   <div className="feature-tag">
                     {product.icon}
                     <span>Authentic Indian</span>
                   </div>
                   <h2>{product.name}</h2>
+                </div>
+
+                <div className="product-image-container">
+                  <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
+                </div>
+                
+                <div className="product-content">
+                  {/* Desktop Header - Shows beside image on large screens */}
+                  <div className="product-desktop-header">
+                    <div className="feature-tag">
+                      {product.icon}
+                      <span>Authentic Indian</span>
+                    </div>
+                    <h2>{product.name}</h2>
+                  </div>
+                  
                   <p>{product.description}</p>
                   <div className="product-features">
                     {product.features.map(feature => (
