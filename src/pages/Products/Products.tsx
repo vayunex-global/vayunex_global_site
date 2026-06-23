@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Leaf, Shield, Zap, Award } from 'lucide-react';
+import { ArrowRight, Leaf, Shield, Zap } from 'lucide-react';
 import './Products.css';
 
 // Import local product images
@@ -62,9 +62,9 @@ const Products: React.FC = () => {
       <section className="section bg-light">
         <div className="container products-intro animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <p>
-            From rare grains like Chak-Hao and Joha rice to powerful Ayurvedic products, 
-            we bring nature's finest rooted in true Indian tradition. Every product is 
-            responsibly sourced, quality-checked, and trusted for delivering authentic 
+            From rare grains like Chak-Hao and Joha rice to powerful Ayurvedic products,
+            we bring nature's finest rooted in true Indian tradition. Every product is
+            responsibly sourced, quality-checked, and trusted for delivering authentic
             health and wellness benefits.
           </p>
         </div>
@@ -88,7 +88,7 @@ const Products: React.FC = () => {
                 <div className="product-image-container">
                   <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
                 </div>
-                
+
                 <div className="product-content">
                   {/* Desktop Header - Shows beside image on large screens */}
                   <div className="product-desktop-header">
@@ -98,7 +98,7 @@ const Products: React.FC = () => {
                     </div>
                     <h2>{product.name}</h2>
                   </div>
-                  
+
                   <p>{product.description}</p>
                   <div className="product-features">
                     {product.features.map(feature => (
